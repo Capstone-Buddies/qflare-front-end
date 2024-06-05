@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- splash_screen styles -->
+
+	<style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
+	<!-- login styles -->
+	<style name="selamat_dat">
+		<item name="android:textSize">30sp</item>
+		<item name="android:textColor">#2D3039</item>
+	</style>
+	<!-- WorkSans Font Styles -->
+	<style name="worksans" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/worksans</item>
+	</style>
+	<style name="worksans_bold" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/worksans_bold</item>
+	</style>
+	<style name="worksans_extrabold" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/worksans_extrabold</item>
+	</style>
+	<style name="worksans_semibold" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/worksans_semibold</item>
+	</style>
+	<style name="worksans_light" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/worksans_light</item>
+	</style>
+	<style name="worksans_reguler" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/worksans_reguler</item>
+	</style>
+	<style name="worksans_medium" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/worksans_medium</item>
+	</style>
+	<style name="poppins_regular" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/poppins_regular</item>
+	</style>
+	<style name="poppins_semibold" parent="@android:style/TextAppearance.Small">
+		<item name="android:fontFamily">@font/poppins_semibold</item>
+	</style>
+
+</resources>

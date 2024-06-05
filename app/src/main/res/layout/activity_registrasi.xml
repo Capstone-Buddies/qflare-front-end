@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/title_buat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/worksans_semibold"
+        android:text="Buat"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle_akun_baru"
+        android:layout_width="157dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="36dp"
+        android:fontFamily="@font/worksans_semibold"
+        android:text="Akun Baru"
+        android:textColor="#5094FF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_buat" />
+
+    <!-- EditText: Nama Lengkap -->
+    <EditText
+        android:id="@+id/input_nama_lengkap"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="15dp"
+        android:hint="Nama Lengkap"
+        android:textColor="#5094FF"
+        android:textColorHint="#5094FF"
+        android:textSize="12sp"
+        android:fontFamily="@font/worksans_medium"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_akun_baru"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- EditText: Email -->
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="15dp"
+        android:hint="Masukkan Email"
+        android:textColor="#5094FF"
+        android:textColorHint="#5094FF"
+        android:textSize="12sp"
+        android:fontFamily="@font/worksans_medium"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/input_nama_lengkap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- EditText: Kata Sandi -->
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="15dp"
+        android:hint="Kata Sandi"
+        android:textColor="#5094FF"
+        android:textColorHint="#5094FF"
+        android:textSize="12sp"
+        android:fontFamily="@font/worksans_medium"
+        android:elevation="4dp"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/input_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- EditText: Konfirmasi Kata Sandi -->
+    <EditText
+        android:id="@+id/input_konfirmasi_sandi"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="15dp"
+        android:hint="Konfirmasi Kata Sandi"
+        android:textColor="#5094FF"
+        android:textColorHint="#5094FF"
+        android:textSize="12sp"
+        android:fontFamily="@font/worksans_medium"
+        android:elevation="4dp"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/input_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_registrasi"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="83dp"
+        android:background="@drawable/button_1"
+        android:text="Registrasi"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/input_konfirmasi_sandi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/login_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Sudah terdaftar? Silahkan"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_registrasi" />
+
+    <TextView
+        android:id="@+id/link_registrasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="Registrasi"
+        android:textColor="#5094FF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/login_prompt"
+        app:layout_constraintStart_toEndOf="@+id/login_prompt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

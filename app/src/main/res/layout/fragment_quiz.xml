@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:ignore="ExtraText">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow"
+        android:background="@color/white"
+        android:contentDescription="@string/back_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Timer Progress Bar -->
+    <!-- Customize your progress bar style -->
+
+    <!-- Timer Icon -->
+    <ProgressBar
+        android:id="@+id/timerProgressBar"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/backButton"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/timerIcon"
+        android:progress="50"
+        android:progressDrawable="@drawable/progress_bar_style" />
+
+    <ImageView
+        android:id="@+id/timerIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_timer"
+        android:contentDescription="@string/timer_icon" />
+    <!-- Next Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_next"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/timerProgressBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        android:text="Berikutnya"
+        android:textSize="10dp"
+        android:background="@drawable/square_button_background"
+        android:textColor="@android:color/white"
+        android:textAppearance="@style/worksans_medium" />
+
+    <FrameLayout
+        android:layout_width="332dp"
+        android:layout_height="512dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/button_next"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="39dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListHistori"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+</RelativeLayout>

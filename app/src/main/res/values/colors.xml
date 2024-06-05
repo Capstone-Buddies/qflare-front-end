@@ -1,0 +1,21 @@
+<resources>
+    <!--  splash_screen colors  -->
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="__bg__splash_screen_color">#DAF1FF</color>
+    <color name="__bg__login_color">#FFFFFF</color>
+    <color name="selamat_datang_kembali_color">#2D3039</color>
+    <color name="Primary_color">#5094FF</color>
+    <color name="_belum_punya_akun__silahkan_registrasi_color">#50555C</color>
+    <color name="fillcolor">#EEF4FF</color>
+    <color name="gray">#B2B2B2</color>
+    <color name="yellow">#FFB945</color>
+</resources>
