@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="11dp"
+    android:height="10dp"
+    android:viewportWidth="11"
+    android:viewportHeight="10">
 
-</selector>
+    <!-- Circle outline -->
+    <path
+        android:strokeColor="#5094FF"
+        android:strokeWidth="1"
+        android:pathData="M5.5,0.5 A4.5,4.5 0 1,1 5.5,9.5 A4.5,4.5 0 1,1 5.5,0.5 Z" />
+
+</vector>

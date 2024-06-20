@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="41dp"
+    android:height="10dp"
+    android:viewportWidth="41"
+    android:viewportHeight="10">
 
-</selector>
+    <!-- Rectangle with rounded corners -->
+    <path
+        android:fillColor="#5094FF"
+        android:pathData="M0.5,5 A5,5 0 0 1 5.5,0 L34.5,0 A5,5 0 0 1 39.5,5 A5,5 0 0 1 34.5,10 L5.5,10 A5,5 0 0 1 0.5,5 Z"/>
+
+</vector>

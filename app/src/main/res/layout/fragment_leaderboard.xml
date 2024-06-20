@@ -1,39 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="24dp"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:src="@drawable/rounded_edittext"
+        android:layout_marginTop="227dp"
+        android:layout_marginStart="165dp"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:src="@drawable/rounded_edittext"
+        android:layout_marginTop="255dp"
+        android:layout_marginStart="40dp"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:src="@drawable/rounded_edittext"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="292dp"/>
+
+    <!-- Background Ladder Image -->
+    <ImageView
+        android:layout_width="380dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_combined_ladders"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="260dp"
+        android:layout_marginStart="15dp"
+        android:contentDescription="Background Ladder"
+        android:alpha="1"/> <!-- Adjust alpha for visibility -->
 
     <LinearLayout
-        android:id="@+id/btnBack"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:gravity="center_vertical"
-        android:paddingVertical="16dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
         <ImageButton
-            android:id="@+id/backButton"
+            android:id="@+id/back_button"
+            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back_arrow"
-            android:background="@color/white"
-            android:contentDescription="@string/back_button"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="10dp" />
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:layout_gravity="start"/>
+
+        <!-- Title -->
+
+        <!-- Top 3 Container -->
         <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-20dp"
+            android:text="Papan Peringkat"
+            android:textSize="20sp"
+            android:fontFamily="@font/worksans_medium"
+            android:textStyle="bold" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Papan Peringkat"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:textAppearance="@style/worksans_medium"/>
-    </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListPlayer"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="24dp">
+
+            <!-- Second Place -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_silver_crown"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <ImageView
+                    android:id="@+id/ivRank2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/iv_profile"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvRanking2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alena Donin"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvExp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1,469 EXP"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- First Place -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_marginBottom="25dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_gold_crown"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/ivRank1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/iv_profile"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvRanking1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Davis Curtis"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvExp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2,569 EXP"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Third Place -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_bronze_crown"
+                    android:layout_marginTop="75dp"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/ivRank3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iv_profile" />
+
+                <TextView
+                    android:id="@+id/tvRanking3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Craig Gouse"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvExp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1,053 EXP"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="110dp"
+        android:padding="16dp"
+        android:background="@drawable/ranking_item_background"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvleaderboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

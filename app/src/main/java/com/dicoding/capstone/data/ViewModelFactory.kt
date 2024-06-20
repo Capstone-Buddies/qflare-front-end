@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.capstone.data.repository.UserRepository
 import com.dicoding.capstone.di.Injection
+import com.dicoding.capstone.upload.UploadViewModel
 import com.dicoding.capstone.viewmodel.LeaderViewModel
 import com.dicoding.capstone.viewmodel.LoginViewModel
 import com.dicoding.capstone.viewmodel.MainViewModel
@@ -32,6 +33,9 @@ class ViewModelFactory(private val repository: UserRepository) : ViewModelProvid
             }
             modelClass.isAssignableFrom(QuizViewModel::class.java) -> {
                 QuizViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(UploadViewModel::class.java) -> {
+                UploadViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

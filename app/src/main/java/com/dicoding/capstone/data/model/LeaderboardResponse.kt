@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class LeaderboardResponse(
 
 	@field:SerializedName("data")
-	val data: Data,
+	val data: LeaderboardData,
 
 	@field:SerializedName("message")
 	val message: String,
@@ -14,7 +14,7 @@ data class LeaderboardResponse(
 	val status: String
 )
 
-data class Data(
+data class LeaderboardData(
 
 	@field:SerializedName("leaderboard")
 	val leaderboard: List<LeaderboardItem>

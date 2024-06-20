@@ -1,6 +1,6 @@
 <resources>
     <!--  splash_screen strings  -->
-    <string name="app_name">User Interface</string>
+    <string name="app_name">Capstone</string>
     <string name="ek_img_content">ExportKit Image</string>
     <!--  login strings  -->
     <string name="buat">Buat</string>
@@ -14,5 +14,16 @@
     <string name="belumpunyaakun">Belum punya akun? Silahkan</string>
     <string name="registrasibutton">Registrasi</string>
     <string name="button_registrasi">Registrasi</string>
-    <string name="login_button">Login</string>
+    <string name="login">Masuk</string>
+    <string name="button_login">Login</string>
+    <string name="back_button">back</string>
+    <string name="timer_icon">timer</string>
+    <string name="profile_picture">profile</string>
+    <string name="camera_icon">camera</string>
+    <string name="email_icon">email</string>
+    <string name="title_home">Home</string>
+    <string name="title_quiz">Quiz</string>
+    <string name="title_result">Result</string>
+    <string name="title_historylist">Historylist</string>
+    <string name="title_profile">Profile</string>
 </resources>

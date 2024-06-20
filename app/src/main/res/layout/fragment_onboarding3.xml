@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#FFFFFF">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:src="@drawable/your_image3"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="370dp">
+
+            <TextView
+                android:id="@+id/competeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compete with others"
+                android:textColor="#3B79D6"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:text="Khusus untuk siswa SMA/SMK yang sedang bersiap-siap menghadapi ujian besar. Dengan Qflare, Anda dapat meningkatkan kemampuan, mengetahui kemajuan, dan bersaing dengan teman sebaya, sambil bersenang-senang."
+                android:textColor="#3B79D6"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#CCFFFFFF"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/inactive_dot"
+            android:layout_margin="4dp" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/inactive_dot"
+            android:layout_margin="4dp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="8dp"
+            android:background="@drawable/active_dot"
+            android:layout_margin="4dp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/circle_button_background"
+        android:src="@drawable/ic_arrow_right" />
+
+</LinearLayout>

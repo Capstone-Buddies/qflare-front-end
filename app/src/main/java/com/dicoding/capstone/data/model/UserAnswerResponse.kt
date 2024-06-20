@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class UserAnswerResponse(
 
 	@field:SerializedName("data")
-	val data: Data,
+	val data: UserAnswerData,
 
 	@field:SerializedName("message")
 	val message: String,
@@ -14,7 +14,7 @@ data class UserAnswerResponse(
 	val status: String
 )
 
-data class Data(
+data class UserAnswerData(
 
 	@field:SerializedName("answers")
 	val answers: List<AnswersItem>

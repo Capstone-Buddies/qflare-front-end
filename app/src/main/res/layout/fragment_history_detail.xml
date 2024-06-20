@@ -1,6 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:layout_gravity="start"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title_histori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Histori"
+            android:textSize="20sp"
+            android:fontFamily="@font/worksans_medium"
+            android:textStyle="bold"
+            android:layout_marginTop="-15dp"
+            android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/titleHistori"
+        android:text="2 sec"
+        android:textColor="@color/Primary_color"
+        android:fontFamily="@font/worksans_reguler"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp">
+
+    </TextView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_previous"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/tvDate"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/next_button_frame"
+        android:layout_gravity="end"
+        android:layout_marginEnd="100dp"
+        android:text="Sebelumnya"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF"
+        android:visibility="visible" />
+
+    <!-- Question Section -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_next"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="-24dp"
+        android:background="@drawable/next_button_frame"
+        android:text="Berikutnya"
+        android:textAllCaps="false"
+        android:fontFamily="@font/worksans_medium"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF" />
+
+    <!-- Question Number and Text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvQuestionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvQuestionText"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet."
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:paddingLeft="4dp"
+            android:justificationMode="inter_word"/>
+    </LinearLayout>
+
+    <!-- Options Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Option A -->
+        <FrameLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/option_background"
+            android:elevation="4dp"
+            android:clipChildren="false">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_optionA"
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing"
+                android:textAlignment="textStart"
+                android:background="@drawable/option_background"
+                android:paddingStart="56dp"
+                android:minHeight="66dp"
+                android:fontFamily="@font/worksans_reguler"
+                android:textColor="@color/Primary_color"
+                android:textSize="13sp"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/optionA_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_a"
+                android:contentDescription="A"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp" />
+        </FrameLayout>
+
+        <!-- Option B -->
+        <FrameLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/option_background"
+            android:elevation="4dp"
+            android:clipChildren="false">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_optionB"
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing"
+                android:background="@drawable/option_background"
+                android:textAlignment="textStart"
+                android:paddingStart="56dp"
+                android:fontFamily="@font/worksans_reguler"
+                android:textColor="@color/Primary_color"
+                android:minHeight="66dp"
+                android:textSize="13sp"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_b"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_b"
+                android:contentDescription="A"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp" />
+        </FrameLayout>
+
+        <!-- Option C -->
+        <FrameLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/option_background"
+            android:clipChildren="false"
+            android:elevation="4dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_optionC"
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing"
+                android:background="@drawable/option_background"
+                android:textAlignment="textStart"
+                android:paddingStart="56dp"
+                android:fontFamily="@font/worksans_reguler"
+                android:textColor="@color/Primary_color"
+                android:minHeight="66dp"
+                android:textSize="13sp"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/optionC_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_c"
+                android:contentDescription="A"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp"/>
+        </FrameLayout>
+
+        <!-- Option D -->
+        <FrameLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/option_background"
+            android:elevation="4dp"
+            android:clipChildren="false">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_optionD"
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing"
+                android:background="@drawable/option_background"
+                android:paddingStart="56dp"
+                android:fontFamily="@font/worksans_reguler"
+                android:textColor="@color/Primary_color"
+                android:minHeight="66dp"
+                android:textSize="13sp"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/optionD_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_d"
+                android:contentDescription="A"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp"/>
+        </FrameLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jawaban Salah"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/worksans_reguler"
+        android:layout_marginTop="40dp"
+        android:textAlignment="textStart"/>
+
+    <TextView
+        android:id="@+id/tvTheAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAnswer"
+        android:fontFamily="@font/worksans_reguler"
+        android:textSize="13sp"
+        android:textColor="@color/red"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing"
+        android:textAlignment="textStart"/>
+</LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loadingIndicatorQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/overlayView"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:background="#80000000"
+        android:visibility="invisible" />
+</RelativeLayout>
+</ScrollView>

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class RegisterResponse(
 
 	@field:SerializedName("data")
-	val data: Data,
+	val data: RegisterData,
 
 	@field:SerializedName("message")
 	val message: String,
@@ -14,7 +14,7 @@ data class RegisterResponse(
 	val status: String
 )
 
-data class Data(
+data class RegisterData(
 
 	@field:SerializedName("email")
 	val email: String,

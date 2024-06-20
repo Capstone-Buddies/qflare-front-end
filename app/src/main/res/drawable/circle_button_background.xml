@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="49dp"
+    android:height="48dp"
+    android:viewportWidth="49"
+    android:viewportHeight="48">
 
-</selector>
+    <!-- Outer rectangle with rounded corners and border -->
+    <path
+        android:pathData="M1,24.5 A23.5,23.5 0 0 1 24.5,1 A23.5,23.5 0 0 1 48,24.5 A23.5,23.5 0 0 1 24.5,48 A23.5,23.5 0 0 1 1,24.5 Z"
+        android:strokeColor="#5094FF"
+        android:strokeWidth="1"/>
+
+
+</vector>

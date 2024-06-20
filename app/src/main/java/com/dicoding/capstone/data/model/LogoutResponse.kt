@@ -2,7 +2,7 @@ package com.dicoding.capstone.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Response(
+data class LogoutResponse(
 
 	@field:SerializedName("message")
 	val message: String,

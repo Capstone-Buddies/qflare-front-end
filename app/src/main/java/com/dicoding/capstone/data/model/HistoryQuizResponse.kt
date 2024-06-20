@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class HistoryQuizResponse(
 
 	@field:SerializedName("data")
-	val data: Data,
+	val data: HistoryData,
 
 	@field:SerializedName("message")
 	val message: String,
@@ -32,7 +32,7 @@ data class HistoriesItem(
 	val timestamp: String
 )
 
-data class Data(
+data class HistoryData(
 
 	@field:SerializedName("histories")
 	val histories: List<HistoriesItem>

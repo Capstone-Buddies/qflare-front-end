@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class CalculateQuizResponse(
 
 	@field:SerializedName("data")
-	val data: Data,
+	val data: CalculateData,
 
 	@field:SerializedName("message")
 	val message: String,
@@ -14,7 +14,7 @@ data class CalculateQuizResponse(
 	val status: String
 )
 
-data class Data(
+data class CalculateData(
 
 	@field:SerializedName("newLevel")
 	val newLevel: Int,

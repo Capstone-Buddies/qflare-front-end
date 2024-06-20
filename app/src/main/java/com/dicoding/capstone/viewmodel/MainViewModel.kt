@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import com.dicoding.capstone.data.model.HistoryQuizResponse
 import com.dicoding.capstone.data.model.UserResponse
 import com.dicoding.capstone.data.pref.UserModel
 import com.dicoding.capstone.data.repository.UserRepository
@@ -25,6 +26,10 @@ class MainViewModel(private val repository: UserRepository) : ViewModel() {
         viewModelScope.launch {
             repository.logout()
         }
+    }
+    fun getLastQuiz(): LiveData<HistoryQuizResponse>{
+        repository.getHistoryQuizData()
+        return repository.listHistoryQuiz
     }
 
 }

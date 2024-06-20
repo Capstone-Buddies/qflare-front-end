@@ -2,17 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--    <LinearLayout-->
-<!--        android:id="@+id/toplayer"-->
-<!--        android:layout_width="430dp"-->
-<!--        android:layout_height="300dp"-->
-<!--        android:orientation="vertical">-->
+    <FrameLayout
+        android:id="@+id/toplayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/bgimage"
-            android:layout_width="430dp"
+            android:layout_width="412dp"
             android:layout_height="282dp"
             android:src="@drawable/bg_blue" />
-<!--    </LinearLayout>-->
+    </FrameLayout>
     <TextView
         android:id="@+id/title_congratulation"
         android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
         android:layout_height="240dp"
         android:layout_below="@id/expText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/iv_medal" />
 
     <TextView
@@ -53,8 +53,7 @@
         android:text="Skor Anda"
         android:textColor="@color/Primary_color"
         android:fontFamily="@font/worksans_bold"
-        android:textSize="30sp"
-        android:layout_marginTop="25dp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/scoreDescription"
@@ -63,9 +62,15 @@
         android:layout_below="@id/scoreText"
         android:layout_centerHorizontal="true"
         android:text="Selamat Anda sudah menyelesaikan quiz"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp" />
+        android:textColor="@color/Primary_color"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scoreDescription"
+        android:src="@drawable/circle_score"/>
 
     <TextView
         android:id="@+id/scoreNumber"
@@ -74,31 +79,32 @@
         android:layout_below="@id/scoreDescription"
         android:layout_centerHorizontal="true"
         android:text="98"
-        android:textColor="@android:color/holo_blue_light"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/worksans_semibold"
+        android:textColor="@color/white"
+        android:textSize="34sp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/playAgainButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="45dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/scoreNumber"
-        android:backgroundTint="@color/yellow"
+        android:background="@drawable/square_frame_yellow"
         android:text="Mainkan Lagi"
-        android:textColor="@android:color/white" />
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backToMenuButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
         android:layout_below="@id/playAgainButton"
         android:layout_marginBottom="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
         android:text="Kembali ke Menu"
-        android:backgroundTint="@color/Primary_color"
+        android:textAllCaps="false"
+        android:background="@drawable/square_blue_back"
         android:textColor="@android:color/white" />
 </RelativeLayout>
