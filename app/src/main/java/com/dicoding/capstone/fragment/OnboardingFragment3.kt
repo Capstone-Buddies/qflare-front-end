@@ -8,16 +8,6 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import com.dicoding.Capstone.R
 
-//class OnboardingFragment3 : Fragment() {
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        return inflater.inflate(R.layout.fragment_onboarding3, container, false)
-//    }
-//}
-
 class OnboardingFragment3(private val onComplete: () -> Unit) : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

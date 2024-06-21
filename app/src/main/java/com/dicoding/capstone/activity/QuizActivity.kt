@@ -45,16 +45,10 @@ class QuizActivity :AppCompatActivity(){
             }
         }
         binding.loadingIndicatorQuiz.visibility = View.VISIBLE
-//        if (binding.loadingIndicatorQuiz.visibility == View.VISIBLE) {
-//            binding.overlayView.visibility = View.VISIBLE
-//        } else {
-//            binding.overlayView.visibility = View.GONE
-//        }
-//        showToast(kategori.toString())
         loadQuizItems(kategori)
         binding.buttonNext.setOnClickListener {
             if(tempAnswer!=0){
-                quizAnswer.add(currentQuizIndex, Answer(currentQuizIndex+1, tempAnswer, elapsedTime))
+                quizAnswer.add(currentQuizIndex, Answer(quizItems[currentQuizIndex].id.toInt(), tempAnswer, elapsedTime))
                 selectClear()
                 currentQuizIndex++
                 updateQuizUI()

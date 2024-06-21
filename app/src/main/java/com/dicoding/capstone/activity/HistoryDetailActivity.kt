@@ -24,7 +24,6 @@ class HistoryDetailActivity :AppCompatActivity() {
         binding.overlayView.visibility = View.VISIBLE
         val id = intent.getIntExtra("idQuiz", 0)
         loadQuizItems(id)
-//        val backBtn: ImageButton = findViewById(R.id.button_back)
         binding.buttonBack.setOnClickListener {
             finish()
         }
@@ -76,13 +75,19 @@ class HistoryDetailActivity :AppCompatActivity() {
             binding.buttonOptionC.text = currentQuizItem.option3
             binding.buttonOptionD.text = currentQuizItem.option4
             when (currentQuizItem.correctness) {
-                true -> binding.tvAnswer.text = "Jawaban Benar"
-                false -> binding.tvAnswer.text = "Jawaban Salah"
+                true -> {
+                    binding.tvAnswer.text = "Jawaban Benar"
+                    binding.tvAnswer.setTextColor(0xFF00FF00.toInt())
+                }
+                false -> {
+                    binding.tvAnswer.text = "Jawaban Salah"
+                    binding.tvAnswer.setTextColor(0xFFFF0000.toInt())
+                }
                 // Add more conditions here if needed
             }
             val listAnswer= arrayOf("A. ${currentQuizItem.option1}", "B. ${currentQuizItem.option2}", "C. ${currentQuizItem.option3}", "D. ${currentQuizItem.option4}")
             val index = currentQuizItem.userAnswer-1
-            if(index > 0){
+            if(index >= 0){
                 binding.tvTheAnswer.text = listAnswer[currentQuizItem.userAnswer-1]
             }else{
                 binding.tvTheAnswer.text = "API ERROR"

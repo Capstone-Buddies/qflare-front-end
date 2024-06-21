@@ -33,7 +33,6 @@
         <activity android:name="com.dicoding.capstone.activity.ResultActivity"/>
         <activity android:name="com.dicoding.capstone.activity.LeaderActivity"/>
         <activity android:name="com.dicoding.capstone.activity.HistoryDetailActivity"/>
-        <activity android:name="com.dicoding.capstone.upload.UploadActivity"/>
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@
         android:textStyle="bold"
         android:textColor="@color/black" />
     <!-- Profile Picture -->
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/profile_picture"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -153,15 +153,14 @@
 
             <!-- Progress Bar -->
             <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
                 android:id="@+id/exp_progress"
-                android:background="@drawable/progress_bar_style"
                 android:layout_width="200dp"
-                android:layout_height="10dp"
+                android:layout_height="20dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:progress="30"
-                android:max="100" />
+                android:max="100"
+                android:progress="0" />
 
             <!-- Exp Text -->
             <TextView

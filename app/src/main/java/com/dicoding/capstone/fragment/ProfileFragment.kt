@@ -16,10 +16,7 @@ import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
 import com.dicoding.Capstone.R
 import com.dicoding.capstone.activity.RegisterActivity
-import com.dicoding.capstone.upload.UploadActivity
 import com.dicoding.capstone.viewmodel.MainViewModel
-import de.hdodenhof.circleimageview.CircleImageView
-
 class ProfileFragment : Fragment(), View.OnClickListener {
     private val viewModel: MainViewModel by activityViewModels()
 
@@ -32,8 +29,8 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         val btnLogout: Button = view.findViewById(R.id.logout_button)
         val btnUpload: ImageView = view.findViewById(R.id.camera_icon)
         btnUpload.setOnClickListener{
-            val moveIntent = Intent(activity, UploadActivity::class.java)
-            activity?.startActivity(moveIntent)
+//            val moveIntent = Intent(activity, UploadActivity::class.java)
+//            activity?.startActivity(moveIntent)
         }
         setupView(view)
         btnLogout.setOnClickListener(this)
@@ -59,7 +56,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         val emailText: TextView = view.findViewById(R.id.user_email)
         val SchoolText: TextView = view.findViewById(R.id.user_school)
         val progressBar: ProgressBar = view.findViewById(R.id.exp_progress)
-        val menuProfil: CircleImageView = view.findViewById(R.id.profile_picture)
+        val menuProfil: ImageView = view.findViewById(R.id.profile_picture)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             menuProfil.setClipToOutline(true);
         }
@@ -83,6 +80,5 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         }
     }
 
-//    } inflater.inflate((R.layout.fragment_profile), container, false)
 
 }

@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.dicoding.Capstone.databinding.FragmentLeaderboardBinding
 import com.dicoding.capstone.adapter.LeaderboardAdapter
 import com.dicoding.capstone.data.ViewModelFactory
+import com.dicoding.capstone.data.model.LeaderboardItem
 import com.dicoding.capstone.viewmodel.LeaderViewModel
 
 class LeaderActivity : AppCompatActivity() {
@@ -37,10 +38,10 @@ class LeaderActivity : AppCompatActivity() {
             val textViews = arrayOf(binding.tvRanking1, binding.tvRanking2, binding.tvRanking3)
             val expViews = arrayOf(binding.tvExp1, binding.tvExp2, binding.tvExp3)
             val imageViews = arrayOf(binding.ivRank1, binding.ivRank2, binding.ivRank3)
-            var data = listData.sortedByDescending { it.exp }
+            val data = listData.sortedWith(compareByDescending<LeaderboardItem> { it.level }.thenByDescending { it.exp })
             for (i in 0 until 3) {
                 textViews[i].text = data[i].username
-                expViews[i].text = "${data[i].exp} EXP"
+                expViews[i].text = "${data[i].exp*data[i].level} EXP"
                 if(data[i].profileImgUrl != null && data[i].profileImgUrl != "null"){
                     Glide.with(this)
                         .load("${data[i].profileImgUrl}") // Replace with your image URL

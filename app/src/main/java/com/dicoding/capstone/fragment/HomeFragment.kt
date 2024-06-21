@@ -50,20 +50,27 @@ class HomeFragment : Fragment(), View.OnClickListener {
         viewModel.getUserData().observe(viewLifecycleOwner){user ->
             if(user?.status =="success"){
                 viewModel.getLastQuiz().observe(viewLifecycleOwner){data ->
-                    if(data.status == "success"){
-                        val quizterakhir: TextView = view.findViewById(R.id.quizterakhir)
-                        val title_skor: TextView = view.findViewById(R.id.title_skor)
-                        val lvl_lastQuiz: TextView = view.findViewById(R.id.lvl_lastQuiz)
-                        quizterakhir.text = "Quiz ${data.data.histories[0].quizCategory}"
-                        title_skor.text = "Skor ${data.data.histories[0].grade}"
-                        lvl_lastQuiz.text = "Level ${data.data.histories[0].level}"
-                        val btnHasil: Button = view.findViewById(R.id.button_hasil)
+                    val quizterakhir: TextView = view.findViewById(R.id.quizterakhir)
+                    val title_skor: TextView = view.findViewById(R.id.title_skor)
+                    val lvl_lastQuiz: TextView = view.findViewById(R.id.lvl_lastQuiz)
+                    val btnHasil: Button = view.findViewById(R.id.button_hasil)
+                    if(data.status == "success" && data.data!=null){
+                        var dataSort = data.data.histories.sortedByDescending { it.timestamp }
+                        quizterakhir.text = "Quiz ${dataSort[0].quizCategory}"
+                        title_skor.text = "Skor ${dataSort[0].grade}"
+                        lvl_lastQuiz.text = "Level ${dataSort[0].level}"
+                        btnHasil.visibility = View.VISIBLE
                         btnHasil.setOnClickListener{
                             Log.d("button", "Ke halaman history")
                             val moveIntent = Intent(activity, HistoryDetailActivity::class.java)
-                            moveIntent.putExtra("idQuiz", data.data.histories[0].id.toInt())
+                            moveIntent.putExtra("idQuiz", dataSort[0].id.toInt())
                             activity?.startActivity(moveIntent)
                         }
+                    }else{
+                        quizterakhir.text = "Belum ada data Quiz"
+                        title_skor.text = ""
+                        lvl_lastQuiz.text = ""
+                        btnHasil.visibility = View.INVISIBLE
                     }
                 }
                 usernameText.text = user?.data?.username
@@ -112,11 +119,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 val moveIntent = Intent(activity, LeaderActivity::class.java)
                 activity?.startActivity(moveIntent)
             }
-//            R.id.button_hasil -> {
-//                Log.d("button", "Ke halaman history")
-//                val moveIntent = Intent(activity, HistoryDetailActivity::class.java)
-//                activity?.startActivity(moveIntent)
-//            }
+
         }
 
     }
